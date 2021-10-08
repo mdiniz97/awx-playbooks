@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+    - name: exec_script hostname
+      shell: "echo 'Teste' ; sleep 5 ; echo 'FIM'"
