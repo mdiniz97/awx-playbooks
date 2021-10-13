@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+    - name: Execute script
+    command: sh /home/matheus/script.sh
