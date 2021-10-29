@@ -3,4 +3,5 @@
   tasks:
     - name: Execute script
       command: sh /home/matheus/script.sh
+    - name: Execute script 2
       command: sh /home/matheus/script.sh
