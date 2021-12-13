@@ -9,5 +9,10 @@
       shell: hostname -I
       register: ip
 
+    - name: error
+      shell: cat asd
+      register: error
+
     - debug: var=hostname.stdout_lines
     - debug: var=ip.stdout_lines
+    - debug: var=error.stdout_lines
