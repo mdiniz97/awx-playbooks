@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+    - name: hostname
+      shell: hostname
+      register: hostname
+
+    - name: ip
+      shell: hostname -I
+      register: ip
+
+    - debug: var=hostname.stdout_lines
+    - debug: var=ip.stdout_lines
