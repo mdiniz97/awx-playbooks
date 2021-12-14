@@ -13,7 +13,9 @@
       shell: cat asd
       register: error
 
-    - debug: 
+    
+    - name: debug
+      debug: 
         var: hostname.stdout_lines
         verbosity: 4
     - debug: var="SIGML_OUTPUT {{ip.stdout_lines}} SIGML_OUTPUT"
