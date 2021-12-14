@@ -17,13 +17,11 @@
     - name: print hostname
       debug: 
         var: hostname.stdout_lines
-        verbosity: 4
 
     - name: print ip
       debug: 
         msg: "SIGML_OUTPUT {{ip.stdout_lines}} SIGML_OUTPUT"
-        verbosity: 2
     
     - name: print error
       debug: 
-        msg: error.stdout_lines
+        var: error.stdout_lines
