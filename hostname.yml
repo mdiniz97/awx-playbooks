@@ -12,6 +12,7 @@
     - name: error
       shell: cat asd
       register: error
+      ignore_errors: true
     
     - name: debug
       debug: 
