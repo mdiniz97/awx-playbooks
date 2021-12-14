@@ -10,13 +10,20 @@
       register: ip
 
     - name: error
-      shell: cat asd
+      shell: echo 'ASD'
       register: error
       ignore_errors: true
     
-    - name: debug
+    - name: print hostname
       debug: 
-        var: hostname
+        var: hostname.stdout_lines
         verbosity: 4
-    - debug: var="SIGML_OUTPUT {{ip.stdout_lines}} SIGML_OUTPUT"
-    - debug: var=error.stdout_lines
+
+    - name: print ip
+      debug: 
+        msg: "SIGML_OUTPUT {{ip.stdout_lines}} SIGML_OUTPUT"
+        verbosity: 2
+    
+    - name: print error
+      debug: 
+        msg: error.stdout_lines
