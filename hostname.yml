@@ -14,5 +14,5 @@
       register: error
 
     - debug: var=hostname.stdout_lines
-    - debug: var=ip.stdout_lines
+    - debug: var="SIGML_OUTPUT {{ip.stdout_lines}} SIGML_OUTPUT"
     - debug: var=error.stdout_lines
