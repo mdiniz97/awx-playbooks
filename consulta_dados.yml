@@ -3,3 +3,9 @@
   tasks:
     - name: Consulta dados
       command: sh /home/matheus/consulta_dados.sh
+      register: data
+    
+    - name: dados
+      debug: 
+        var: data.stdout_lines
+
