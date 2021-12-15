@@ -7,5 +7,4 @@
     
     - name: dados
       debug: 
-        var: data.stdout_lines
-
+        var: data.stdout
