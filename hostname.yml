@@ -13,7 +13,7 @@
       shell: echo 'ASD'
       register: error
       ignore_errors: 
-      verbosity: 2
+        verbosity: 2
     
     - name: print hostname
       debug: 
