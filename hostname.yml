@@ -4,6 +4,7 @@
     - name: hostname-teste
       shell: hostname
       register: hostname
+      verbosity: 2
 
     - name: ip
       shell: hostname -I
