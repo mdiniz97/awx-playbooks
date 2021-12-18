@@ -2,7 +2,7 @@
 - hosts: all
   tasks:
     - name: Consulta dados
-      command: sh /home/matheus/consulta_dados.sh
+      command: sh ~/consulta_dados.sh
       register: data
     
     - name: dados
