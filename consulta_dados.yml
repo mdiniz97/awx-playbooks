@@ -5,13 +5,13 @@
       command: sh ~/consulta_dados.sh
       register: data
       
-    - name: Extra vars
-      shell: echo "{{ sispl_version }}" > test && cat test
-      register: extra
+#     - name: Extra vars
+#       shell: echo "{{ sispl_version }}" > test && cat test
+#       register: extra
     
     - name: dados
       debug: 
         var: data.stdout
-    - name: extra
-      debug:
-        var: extra.stdout
+#     - name: extra
+#       debug:
+#         var: extra.stdout
