@@ -6,7 +6,7 @@
       register: data
     - debug: msg="{{ hostvars[inventory_hostname] }}"
     - name: Extra vars
-      command: echo "{{ sispl_version }}" > test && cat test
+      command: echo \""{{ sispl_version }}"\" > test && cat test
       register: extra
     
     - name: dados
