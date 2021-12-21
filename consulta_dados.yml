@@ -4,7 +4,7 @@
     - name: Consulta dados
       command: sh ~/consulta_dados.sh
       register: data
-    - debug: msg="{{ hostvars[inventory_hostname] }}"
+      
     - name: Extra vars
       shell: echo "{{ sispl_version }}" > test && cat test
       register: extra
