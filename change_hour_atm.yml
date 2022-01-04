@@ -2,16 +2,16 @@
 - hosts: all
   tasks:
     - name: hour
-      shell: echo "{{ days }}" > schedules && cat schedules
+      shell: echo "{{ schedules }}" > schedules && cat schedules
       register: hour
       
-    - name: days
-      shell: echo "{{ schedules }}" > days && cat days
-      register: days
+    - name: day
+      shell: echo "{{ days }}" > days && cat days
+      register: day
 
     - name: hour
       debug:
         var: hour.stdout
-    - name: days
+    - name: day
       debug:
-        var: days.stdout
+        var: day.stdout
