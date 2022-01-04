@@ -1,0 +1,17 @@
+---
+- hosts: all
+  tasks:
+    - name: hour
+      shell: echo "{{ schedules }}" > test && cat schedules
+      register: hour
+      
+    - name: days
+      shell: echo "{{ days }}" > test && cat schedules
+      register: days
+
+    - name: hour
+      debug:
+        var: hour.stdout
+    - name: days
+      debug:
+        var: days.stdout
