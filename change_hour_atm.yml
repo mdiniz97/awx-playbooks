@@ -2,11 +2,11 @@
 - hosts: all
   tasks:
     - name: hour
-      shell: echo "{{ schedules }}" > test && cat schedules
+      shell: echo "{{ schedules }}" > schedules && cat schedules
       register: hour
       
     - name: days
-      shell: echo "{{ days }}" > test && cat schedules
+      shell: echo "{{ days }}" > days && cat days
       register: days
 
     - name: hour
