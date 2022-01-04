@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - name: sispl
+      shell: echo "{{ sispl_version }}" > test && cat test
+      register: sispl
+
+    - name: sispl
+      debug:
+        var: sispl.stdout
